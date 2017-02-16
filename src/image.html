@@ -1,0 +1,15 @@
+<div class="form-group has-feedback {{form.htmlClass}} schema-form-image" ng-class="{'has-error': form.disableErrorState !== true && hasError(), 'has-success': form.disableSuccessState !== true &&  hasSuccess()}">
+  
+	<div class="col-sm-4">
+	  <label class="control-label {{form.labelHtmlClass}}" ng-class="{'sr-only': !showTitle()}" for="{{form.key.slice(-1)[0]}}">{{form.title}}</label>
+	</div>
+
+	<div class="col-sm-8">
+		<img ng-if="$$value$$" class="img-responsive {{form.fieldHtmlClass}}" sf-field-model="replaceAll" src="{{$$value$$}}" id="preview"/>
+		<btn ng-if="form.readonly != true" file-upload class="btn btn-primary" sf-field-model>Upload</btn>
+		<btn ng-if="form.readonly != true" edit-image class="btn btn-primary" sf-field-model>Edit</btn>
+	</div>
+
+  	<!-- link model to the button - directive -->
+  	<span class="help-block" ng-if="form.description" sf-message="form.description"></span>
+</div>

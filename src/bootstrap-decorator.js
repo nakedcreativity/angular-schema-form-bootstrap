@@ -87,6 +87,7 @@ function(decoratorsProvider, sfBuilderProvider, sfPathProvider) {
     'radios-inline': {template: base + 'radios-inline.html', builder: defaults},
     radiobuttons: {template: base + 'radio-buttons.html', builder: defaults},
     help: {template: base + 'help.html', builder: defaults},
+    image: {template: base + 'image.html', builder: defaults},
     'default': {template: base + 'default.html', builder: defaults}
   }, []);
 
